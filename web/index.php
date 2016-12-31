@@ -27,8 +27,10 @@ $app->register(new Silex\Provider\HttpFragmentServiceProvider())
     ->register(new Silex\Provider\LocaleServiceProvider())
     ->register(new Silex\Provider\TranslationServiceProvider())
     ->register(new Silex\Provider\FormServiceProvider())
+    ->register(new Silex\Provider\VarDumperServiceProvider())
     ;
 
-$app->mount('/', new Mspstoque\ControllerProvider\ProductControllerProvider());
+$app->mount('/', new Mspstoque\ControllerProvider\ProductControllerProvider())
+    ->mount('/install', new Mspstoque\ControllerProvider\InstallControllerProvider());
 
 $app->run();
