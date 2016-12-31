@@ -28,7 +28,12 @@ $app->register(new Silex\Provider\HttpFragmentServiceProvider())
     ->register(new Silex\Provider\TranslationServiceProvider())
     ->register(new Silex\Provider\FormServiceProvider())
     ->register(new Silex\Provider\VarDumperServiceProvider())
-    ;
+    ->register(new Silex\Provider\DoctrineServiceProvider(), [
+        'db.options' => [
+            'driver' => 'pdo_sqlite',
+            'path' => __DIR__ . '/database/app.db',
+        ]
+    ]);
 
 $app->mount('/', new Mspstoque\ControllerProvider\ProductControllerProvider())
     ->mount('/install', new Mspstoque\ControllerProvider\InstallControllerProvider());
