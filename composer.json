@@ -5,7 +5,9 @@
         "twig/twig": "^1.30",
         "symfony/twig-bridge": "^3.2",
         "symfony/form": "^3.2",
-        "symfony/translation": "^3.2"
+        "symfony/translation": "^3.2",
+        "symfony/var-dumper": "^3.2",
+        "doctrine/dbal": "~2.2"
     },
     "autoload": {
         "psr-4": { "Mspstoque\\": "src/Mspstoque" }
