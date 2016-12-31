@@ -12,23 +12,16 @@
  */
 namespace Mspstoque\ControllerProvider;
 
-class ProductControllerProvider extends AbstractControllerProvider
+class InstallControllerProvider extends AbstractControllerProvider
 {
-
     protected function indexAction()
     {
         $this->cc->get('/', function(){
-            return $this->app['twig']->render('product/index.html.twig');
-        })->bind('product_index');
-
-        return $this;
-    }
-
-    protected function listAction()
-    {
-        $this->cc->get('/list', function(){
-            return 'product list';
-        })->bind('product_list');
+            // -- Check módulos
+            // -- Check database
+            // -- Create database
+            return 'Not implemented';
+        })->bind('install_index');
 
         return $this;
     }
