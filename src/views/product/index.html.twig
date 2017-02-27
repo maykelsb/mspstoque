@@ -1,6 +1,18 @@
-{% extends "layouts/main.html.twig" %}
+{% extends "layouts/hierapolis/layout.html.twig" %}
+{% block breadcrumb %}
+<ul class='breadcrumb' id='breadcrumb'>
+  <li class='title'>Produtos</li>
+  <li class='active'><a href="#">lista</a></li>
+</ul>
+{% endblock %}
+{% block lista_produto %} active {% endblock %}
+{% block page_icon %}list-alt{% endblock %}
+{% block page_title %}Produtos{% endblock %}
 
-{% block css %}
+
+
+
+{#{% block css %}
 <link rel="stylesheet" type="text/css" href="/widgets/DataTables/datatables.min.css"/>
 {% endblock %}
 
@@ -17,4 +29,4 @@
 {% endblock %}
 
 {% block javascript %}
-{% endblock %}
+{% endblock %}#}

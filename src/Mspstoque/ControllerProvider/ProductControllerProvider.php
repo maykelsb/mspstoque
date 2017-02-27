@@ -26,9 +26,9 @@ class ProductControllerProvider extends AbstractControllerProvider
 
     protected function listAction()
     {
-        $this->cc->get('/list', function(){
-            return 'product list';
-        })->bind('product_list');
+        $this->cc->get('/add', function(){
+            return $this->app['twig']->render('product/add.html.twig');
+        })->bind('product_add');
 
         return $this;
     }
